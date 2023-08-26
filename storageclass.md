@@ -5,9 +5,22 @@ https://github.com/kubernetes-csi
 
 not working
 
+### Set up a NFS Server on a Kubernetes cluster
+https://github.com/kubernetes-csi/csi-driver-nfs/blob/master/deploy/example/nfs-provisioner/README.md
 
 ### NFS CSI driver
 https://github.com/kubernetes-csi/csi-driver-nfs/blob/master/docs/install-csi-driver-master.md
+
+```
+# NFS Server节点安装部署
+apt-get update;apt-get -y install nfs-kernel-server
+mkdir /storage && echo "/storage *(rw,sync,no_root_squash)" >> /etc/exports
+systemctl restart nfs-kernel-server
+
+# NFS Client节点安装部署
+apt-get -y install nfs-common
+```
+
 
  - Option#2. local install
 ```console
