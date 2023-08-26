@@ -1,6 +1,7 @@
 
 ```shell
 # get all resources
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -A
 kubectl get all -o wide -A 
 
 kubectl api-versions  # 查看所有apiVersion版本
