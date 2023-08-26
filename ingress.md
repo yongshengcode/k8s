@@ -50,3 +50,5 @@ annotations:
 # 如果没有设置ingressclass默认值，可以在创建ingress时，添加一下参数指定ingressclassname
 ingressClassName: nginx
 ```
+
+Ingress, services and deployment must be in the same namespace
