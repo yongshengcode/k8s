@@ -22,4 +22,4 @@ kubectl -n kube-system get pod -o wide -l app=csi-nfs-controller
 kubectl -n kube-system get pod -o wide -l app=csi-nfs-node
 ```
 
-There was some network errors when i did install above plugins, and I updated the proxies for Docker to solve the network issue.
+There was some network errors when i did install above plugins, and I updated the proxies for Docker to solve the network issue. Refer to https://github.com/yongshengcode/docker/blob/main/install.md
