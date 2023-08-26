@@ -31,3 +31,8 @@ Add hostNetwork: true to controller pod
         name: controller
         hostNetwork: true
 ```
+
+For network issue
+	修改控制器的image为：registry.cn-beijing.aliyuncs.com/damon_registry/cka:controller-v1.8.1
+	
+	修改webhook的image为：registry.cn-beijing.aliyuncs.com/damon_registry/cka:kube-webhook-certgen-v20230407
