@@ -36,3 +36,17 @@ For network issue
 	修改控制器的image为：registry.cn-beijing.aliyuncs.com/damon_registry/cka:controller-v1.8.1
 	
 	修改webhook的image为：registry.cn-beijing.aliyuncs.com/damon_registry/cka:kube-webhook-certgen-v20230407
+
+
+### IngressClass 
+https://kubernetes.io/zh-cn/docs/reference/kubernetes-api/service-resources/ingress-class-v1/#IngressClass
+```
+注意事项：
+# 可以在nginx的ingressclass设置为默认，添加如下annotation
+kubectl edit ingressclasses.networking.k8s.io nginx
+annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
+
+# 如果没有设置ingressclass默认值，可以在创建ingress时，添加一下参数指定ingressclassname
+ingressClassName: nginx
+```
