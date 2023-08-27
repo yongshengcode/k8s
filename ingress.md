@@ -52,3 +52,8 @@ ingressClassName: nginx
 ```
 
 Ingress, services and deployment must be in the same namespace
+
+
+Nginx Ingress Controller - Failed Calling Webhook - https://stackoverflow.com/questions/61616203/nginx-ingress-controller-failed-calling-webhook
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+ kubectl get validatingwebhookconfigurations 
